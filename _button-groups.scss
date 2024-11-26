@@ -1,0 +1,29 @@
+/* ==========================================================================
+   Button Groups
+   ========================================================================== */
+.btn-group {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-content: center;
+  align-items: center;
+
+  > .btn,
+  > .dropdown > .btn {
+    border-radius: 0px;
+    border: 1px solid rgba($primary, 0.2);
+    border-left-width: 0px;
+  }
+
+  > .btn:first-child:not(:last-child),
+  > .dropdown:first-child:not(:last-child) > .btn {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-left-width: 1px;
+  }
+
+  > .btn:last-child:not(:first-child),
+  > .dropdown:last-child:not(:first-child) > .btn {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}

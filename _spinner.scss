@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Spinner
+   ========================================================================== */
+
+.spinner {
+  background: transparent;
+  border-radius: 50%;
+  color: $white;
+  display: inline-block;
+  font-family: "icon-12";
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: center;
+
+  > [class*="icon-"] {
+    display: inline;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    visibility: hidden;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.spinner::before {
+  animation: rotate-360 .6s linear infinite;
+  border-color: transparent;
+  border-radius: 50%;
+  border-style: solid;
+  content: "";
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  transform-origin: center center;
+}
+
+/* Sizes
+   ========================================================================== */
+
+.spinner,
+.spinner.spinner-small {
+  height: 24px;
+  width: 24px;
+
+  &::before {
+    border-width: 3px;
+    height: 24px;
+    width: 24px;
+  }
+
+  &.spinner-white::before {
+    border-width: 2px;
+  }
+
+  > [class*="icon-"] {
+    font-size: 12px;
+    line-height: 24px;
+    width: 24px;
+  }
+}
+
+.spinner.spinner-medium {
+  height: 36px;
+  width: 36px;
+
+  &::before {
+    border-width: 4px;
+    height: 36px;
+    width: 36px;
+  }
+
+  > [class*="icon-"] {
+    font-size: 18px;
+    line-height: 36px;
+    width: 36px;
+  }
+}
+
+.spinner.spinner-large {
+  height: 48px;
+  width: 48px;
+
+  &::before {
+    border-width: 5px;
+    height: 48px;
+    width: 48px;
+  }
+
+  > [class*="icon-"] {
+    font-size: 24px;
+    line-height: 48px;
+    width: 48px;
+  }
+}
+
+/* Styles
+   ========================================================================== */
+
+.spinner::before {
+  border-bottom-color: $color-green;
+  border-left-color: $color-green;
+  border-top-color: $color-green;
+}
+
+.spinner.spinner-danger::before {
+  border-bottom-color: $color-red;
+  border-left-color: $color-red;
+  border-top-color: $color-red;
+}
+
+.spinner.spinner-warning::before {
+  border-bottom-color: $color-yellow;
+  border-left-color: $color-yellow;
+  border-top-color: $color-yellow;
+}
+
+.spinner.spinner-white::before {
+  border-bottom-color: $white;
+  border-left-color: $white;
+  border-top-color: $white;
+  border-right-color: rgba($white, 0.2);
+}
+
+/* is Done
+   ========================================================================== */
+
+.spinner.spinner-done {
+  background: $color-green;
+
+  &::before {
+    border-width: 0px;
+  }
+
+  > [class*="icon-"] {
+    visibility: visible;
+  }
+}
+
+.spinner.spinner-done.spinner-danger {
+  background: $color-red;
+}
+
+.spinner.spinner-done.spinner-warning {
+  background: $color-yellow;
+}
