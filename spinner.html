@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Demo: Spinner</title>
+
+  <link rel="stylesheet" href="../build/marble.css">
+  <link rel="stylesheet" href="../build/fonts/galano/galano.css">
+  <link rel="stylesheet" href="../build/fonts/icon-12/icon-12.css">
+  <link rel="stylesheet" href="../build/fonts/icon-16/icon-16.css">
+
+  <style>
+    body {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 20px;
+      max-width: 640px;
+      margin: 0 auto 20px;
+    }
+
+    .box {
+      border: 0;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      color: rgba(0, 0, 0, .8);
+      font-size: 14px;
+      font-weight: 400;
+      height: 160px;
+      padding: 12px;
+      text-align: center;
+      width: 200px;
+      vertical-align: middle;
+      display: table;
+      justify-self: center;
+      align-self: center;
+    }
+
+    .box h2,
+    .box .spinner {
+      margin: 0 0 24px;
+      padding: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Spinners</h1>
+  <div class="boxes">
+    <div class="box">
+      <h2>spinner large</h3>
+      <span class="spinner spinner-large">
+        <span class="icon-12-check"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner medium</h3>
+      <span class="spinner spinner-medium">
+        <span class="icon-12-check"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner small</h3>
+      <span class="spinner spinner-small">
+        <span class="icon-12-check"></span>
+      </span>
+    </div>
+    <!-- danger -->
+    <div class="box">
+      <h2>spinner large danger</h3>
+      <span class="spinner spinner-large spinner-danger">
+        <span class="icon-12-close-short"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner medium danger</h3>
+      <span class="spinner spinner-medium spinner-danger">
+        <span class="icon-12-close-short"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner small danger</h3>
+      <span class="spinner spinner-small spinner-danger">
+        <span class="icon-12-close-short"></span>
+      </span>
+    </div>
+
+    <!-- warning -->
+    <div class="box">
+      <h2>spinner large warning</h3>
+      <span class="spinner spinner-large spinner-warning">
+        <span class="icon-12-exclamation"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner medium warning</h3>
+      <span class="spinner spinner-medium spinner-warning">
+        <span class="icon-12-exclamation"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner small warning</h3>
+      <span class="spinner spinner-small spinner-warning">
+        <span class="icon-12-exclamation"></span>
+      </span>
+    </div>
+  </div>
+
+  <!-- spinner done -->
+  <div class="boxes">
+    <div class="box">
+      <h2>spinner done</h3>
+      <span class="spinner spinner-large spinner-done">
+        <span class="icon-12-check"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner done</h3>
+      <span class="spinner spinner-medium spinner-done">
+        <span class="icon-12-check"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner done</h3>
+      <span class="spinner spinner-small spinner-done">
+        <span class="icon-12-check"></span>
+      </span>
+    </div>
+    <!-- danger -->
+    <div class="box">
+      <h2>spinner done danger</h3>
+      <span class="spinner spinner-large spinner-danger spinner-done">
+        <span class="icon-12-close-short"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner done danger</h3>
+      <span class="spinner spinner-medium spinner-danger spinner-done">
+        <span class="icon-12-close-short"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner done danger</h3>
+      <span class="spinner spinner-small spinner-danger spinner-done">
+        <span class="icon-12-close-short"></span>
+      </span>
+    </div>
+    <!-- warning -->
+    <div class="box">
+      <h2>spinner done warning</h3>
+      <span class="spinner spinner-large spinner-warning spinner-done">
+        <span class="icon-12-exclamation"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner done warning</h3>
+      <span class="spinner spinner-medium spinner-warning spinner-done">
+        <span class="icon-12-exclamation"></span>
+      </span>
+    </div>
+
+    <div class="box">
+      <h2>spinner done warning</h3>
+      <span class="spinner spinner-small spinner-warning spinner-done">
+        <span class="icon-12-exclamation"></span>
+      </span>
+    </div>
+
+  </div>
+</body>
+</html>

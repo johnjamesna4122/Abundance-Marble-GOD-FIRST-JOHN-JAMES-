@@ -1,0 +1,32 @@
+{namespace Spinner}
+
+/**
+ *
+ */
+{template .render}
+  {@param? isDone: ?}
+  {@param? size: ?}
+  {@param? style: ?}
+
+  {let $spinnerClasses kind="text"}
+    {if $isDone}{sp}spinner-done{/if}
+    {if $size}{sp}spinner-{$size}{/if}
+    {if $style}{sp}spinner-{$style}{/if}
+  {/let}
+
+  {let $icon kind="text"}
+    {if $style == 'danger'}
+      icon-12-close-short
+    {elseif $style == 'warning'}
+      icon-12-exclamation
+    {else}
+      icon-12-check
+    {/if}
+  {/let}
+
+  <span class="spinner{$spinnerClasses}">
+    {if $isDone}
+      <span class="{$icon}"></span>
+    {/if}
+  </span>
+{/template}
