@@ -1,0 +1,30 @@
+{namespace Banner}
+
+/**
+  * @param elementClasses
+  * @param? animationClass
+  * @param? closeButton
+  * @param? closeButtonHtml
+  * @param? closeButtonHandler
+  * @param? isVisible
+  */
+{template .render}
+  {@param? body: html}
+
+  {if $isVisible}
+    <div class="banner {$elementClasses} {$animationClass}">
+      <div class="banner-content">
+        {$body}
+      </div>
+    {if $closeButton or $closeButtonHtml}
+      <button type="button" class="close" aria-label="Close" data-onclick="{$closeButtonHandler ?: 'hide'}">
+        {if $closeButtonHtml}
+          {$closeButtonHtml}
+        {else}
+          <span aria-hidden="true">×</span>
+        {/if}
+      </button>
+    {/if}
+    </div>
+  {/if}
+{/template}
